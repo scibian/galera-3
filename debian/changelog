@@ -1,12 +1,105 @@
-galera-3 (25.3.14-1) UNRELEASED; urgency=low
+galera-3 (25.3.20-1) unstable; urgency=low
 
-  * Sync Debian packaging from downstream to include improvements developed at
-    http://anonscm.debian.org/cgit/pkg-mysql/galera-3.git
+  * Update Vcs-* URLs to use secure connections
+  * New upstream release 25.3.20
+  * Include patch to avoid unaligned access, which fixes the regression
+    in the armhf build (Closes: #855657)
 
- -- Codership Oy <info@codership.com>  Fri, 01 Jan 2016 16:02:54 +0200
+ -- Otto Kekäläinen <otto@debian.org>  Thu, 09 Mar 2017 18:41:42 +0200
 
-galera-3 (25.3.6-1) UNRELEASED; urgency=low
+galera-3 (25.3.19-2) unstable; urgency=low
 
-  * First deb release.
+  * Backport upstream fix for OpenSSL SSL_R_SHORT_READ
 
- -- Codership Oy <info@codership.com>  Fri, 01 Aug 2014 14:36:49 +0300
+ -- Otto Kekäläinen <otto@debian.org>  Fri, 11 Nov 2016 21:38:04 +0200
+
+galera-3 (25.3.19-1) unstable; urgency=low
+
+  * New upstream release 25.3.19
+  * Make garb depend on lsb-base as uses /lib/lsb/init-functions
+
+ -- Otto Kekäläinen <otto@debian.org>  Thu, 10 Nov 2016 23:02:48 +0200
+
+galera-3 (25.3.17-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixes a GCC6/C++11 compatibility issue (Closes: #812052)
+
+ -- Otto Kekäläinen <otto@debian.org>  Mon, 15 Aug 2016 21:04:56 +0300
+
+galera-3 (25.3.16-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Otto Kekäläinen <otto@debian.org>  Mon, 30 May 2016 23:28:41 +0300
+
+galera-3 (25.3.15-1) unstable; urgency=low
+
+  * New upstream release
+    - Remove all obsolete patches
+
+ -- Otto Kekäläinen <otto@debian.org>  Wed, 16 Mar 2016 20:37:10 +0200
+
+galera-3 (25.3.14-2~exp1) experimental; urgency=low
+
+  * Update standards version, vcs-link to use https and maintainer e-mail
+  * Add patch to fix build regression on s390x
+
+ -- Otto Kekäläinen <otto@debian.org>  Sun, 06 Mar 2016 00:09:49 +0200
+
+galera-3 (25.3.14-1) unstable; urgency=low
+
+  * New upstream release
+  * Ran wrap-and-sort
+
+ -- Otto Kekäläinen <otto@seravo.fi>  Sun, 07 Feb 2016 22:09:15 +0200
+
+galera-3 (25.3.13-2) unstable; urgency=low
+
+  * Added libasio-dev as build dependency. The new upstream SConscript will
+    automatically use system ASIO if the provided version is recent enough
+    (Closes: #804336).
+  * Make GFDL link explicit and other Lintian fixes
+  * Update git-buildpackage config to allow fix branches etc
+
+ -- Otto Kekäläinen <otto@seravo.fi>  Thu, 31 Dec 2015 23:45:17 +0200
+
+galera-3 (25.3.13-1) unstable; urgency=low
+
+  * Import new upstream release and drop patches that have become obsolete
+
+ -- Otto Kekäläinen <otto@seravo.fi>  Fri, 27 Nov 2015 22:48:00 +0200
+
+galera-3 (25.3.12-3) unstable; urgency=low
+
+  * Update patches with proper DEP-3 compliant headers
+  * Add patch to fix build error after SSLv3 deprication (Closes: #804336)
+
+ -- Otto Kekäläinen <otto@seravo.fi>  Fri, 13 Nov 2015 15:41:29 +0200
+
+galera-3 (25.3.12-2) unstable; urgency=low
+
+  * Backport upstream commit as patch to fix multiple build problems
+    (Closes: #799150)
+  * Backport upstream commit as patch to fix x32 build problems
+
+ -- Otto Kekäläinen <otto@seravo.fi>  Sun, 20 Sep 2015 23:27:16 +0300
+
+galera-3 (25.3.12-1) unstable; urgency=low
+
+  * Import new upstream release
+    - Fixes GCC 5 building and PRETTY_FUNCTION error (Closes: #797238)
+    - Fixes for pthread build issues on different platforms
+  * Add lintian override as garbd is intentionally not started upon installation
+  * Print in build log env info to help debug builds on different platforms
+  * Update gdb.conf to have tags signed by default
+  * Print config.log contents in build log for easier debugging of Debian builds
+  * Print config.log if build fails
+
+ -- Otto Kekäläinen <otto@seravo.fi>  Sun, 06 Sep 2015 20:45:43 +0300
+
+galera-3 (25.3.10-1) unstable; urgency=low
+
+  * Initial upload (Closes: #562666)
+
+ -- Otto Kekäläinen <otto@seravo.fi>  Fri, 01 May 2015 20:15:51 +0300

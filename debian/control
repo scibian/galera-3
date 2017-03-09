@@ -1,9 +1,9 @@
 Source: galera-3
-Maintainer: Codership Oy <info@codership.com>
-Uploaders: Otto Kekäläinen <otto@seravo.fi>
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Uploaders: Otto Kekäläinen <otto@debian.org>
 Section: database
 Priority: optional
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Build-Depends: check,
                debhelper (>= 9),
                libasio-dev,
@@ -12,8 +12,8 @@ Build-Depends: check,
                libssl-dev,
                scons (>= 2)
 Homepage: http://www.galeracluster.com/
-Vcs-Git: git://github.com/codership/galera.git
-Vcs-Browser: http://github.com/codership/galera.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-mysql/galera-3.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-mysql/galera-3.git
 
 Package: galera-3
 Architecture: any
@@ -51,7 +51,7 @@ Architecture: any
 Conflicts: garbd-2, garbd2, percona-xtradb-cluster-garbd-2.x
 Breaks: percona-xtradb-cluster-galera-2.x
 Replaces: percona-xtradb-cluster-galera-2.x
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: lsb-base (>= 3.0-6), ${misc:Depends}, ${shlibs:Depends}
 Description: Galera arbitrator daemon
  Galera is a fast synchronous multimaster wsrep provider (replication engine)
  for transactional databases and similar applications. For more information
