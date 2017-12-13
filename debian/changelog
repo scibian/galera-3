@@ -1,3 +1,9 @@
+galera-3 (25.3.20-1sci8u1) scibian8; urgency=medium
+
+  * Scibian8 rebuild.
+
+ -- Benoit Boccard <benoit-externe.boccard@edf.fr>  Thu, 12 Dec 2017 17:26:04 +0200
+
 galera-3 (25.3.20-1~calibre9+1) calibre9; urgency=medium
 
   * Backport to Calibre9.

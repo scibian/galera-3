@@ -1,6 +1,5 @@
 Source: galera-3
-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
-Uploaders: Otto Kekäläinen <otto@debian.org>
+Maintainer: Scibian Project <packaging@scibian.org>
 Section: database
 Priority: optional
 Standards-Version: 3.9.8
@@ -12,8 +11,8 @@ Build-Depends: check,
                libssl-dev,
                scons (>= 2)
 Homepage: http://www.galeracluster.com/
-Vcs-Git: https://anonscm.debian.org/git/pkg-mysql/galera-3.git
-Vcs-Browser: https://anonscm.debian.org/git/pkg-mysql/galera-3.git
+Vcs-Git: https://github.com/scibian/galera-3.git
+Vcs-Browser: https://github.com/scibian/galera-3
 
 Package: galera-3
 Architecture: any
